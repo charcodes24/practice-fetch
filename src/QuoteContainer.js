@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-export default function Quotes() {
+import Quote from "./Quote";
+
+export default function QuoteContainer() {
     const [quotes, setQuotes] = useState([])
 
     useEffect(() => {
@@ -9,11 +11,12 @@ export default function Quotes() {
           .then((data) => setQuotes(data));
     }, []);
 
-    console.log("CONSOLE", quotes)
+    const displayQuotes = quotes.map(quote =>  <Quote key={quote.id} quote={quote} />)
+
 
     return (
         <div>
-
+            {displayQuotes}
         </div>
     )
 }

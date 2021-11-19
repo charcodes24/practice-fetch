@@ -1,6 +1,6 @@
 
 import Header from './Header';
-import Quotes from './Quotes';
+import QuoteContainer from './QuoteContainer';
 
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Quotes />
+      <QuoteContainer />
     </div>
   );
 }
